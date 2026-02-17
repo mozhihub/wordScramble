@@ -1,130 +1,150 @@
-/* Import Google font - Poppins */
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 
 body {
-  display: flex;
-  padding: 0 10px;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
-  background: linear-gradient(180deg, #fff 50%, #9d14dc 50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: #0f0c29;
+    background: linear-gradient(135deg, #1e1e2f 0%, #111 100%);
+    padding: 20px;
 }
 
 .container {
-  width: 420px;
-  border-radius: 10px;
-  background: #222;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    width: 100%;
+    max-width: 400px;
+    background: #1c1c2b;
+    border-radius: 20px;
+    padding: 25px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
-.container h2 {
-  font-size: 28px;
-  font-weight: 600;
-  padding: 20px 25px;
-  border-bottom: 1px solid #333;
-  color: #fff;
+h2 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #333;
+    padding-bottom: 15px;
 }
 
-.container .content {
-  margin: 25px 20px 35px;
+.timer-box {
+    text-align: right;
+    margin-bottom: 15px;
 }
 
-.content .word {
-  user-select: none;
-  font-size: 36px;
-  font-weight: 600;
-  text-align: center;
-  letter-spacing: 18px;
-  margin-right: -18px;
-  word-break: break-all;
-  text-transform: uppercase;
-  color: #5372f0;
+.time b {
+    color: #ff4757;
+    font-size: 20px;
 }
 
-.content .details {
-  margin: 25px 0 20px;
+.word {
+    font-size: 34px;
+    font-weight: 700;
+    text-align: center;
+    letter-spacing: 12px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    color: #00d2ff;
+    word-break: break-all;
 }
 
-.details p {
-  font-size: 18px;
-  margin-bottom: 10px;
-  color: #bbb;
+.hint {
+    font-size: 16px;
+    color: #bbb;
+    margin-bottom: 20px;
 }
 
-.details p b {
-  font-weight: 500;
+.hint span {
+    color: #fff;
+    font-weight: 600;
 }
 
-.content input {
-  width: 100%;
-  height: 50px;
-  outline: none;
-  padding: 0 15px;
-  font-size: 16px;
-  border-radius: 8px;
-  border: 1px solid #333;
-  background-color: #111;
-  color: #bbb;
-  transition: border-color 0.3s ease, background-color 0.3s ease,
-    color 0.3s ease;
+input {
+    width: 100%;
+    height: 55px;
+    background: #0f0c29;
+    border: 2px solid #333;
+    border-radius: 12px;
+    padding: 0 15px;
+    font-size: 18px;
+    color: #fff;
+    margin-bottom: 20px;
+    outline: none;
+    text-align: center;
 }
 
-.content input:focus {
-  border-color: #5372f0;
-  background-color: #222;
-  color: #fff;
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+input:focus {
+    border-color: #00d2ff;
 }
 
-.content input::placeholder {
-  color: #555;
-}
-
-.content input:focus::placeholder {
-  color: #bbb;
-}
-
-.content .buttons {
-  display: flex;
-  margin-top: 20px;
-  justify-content: space-between;
+.buttons {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
 }
 
 .buttons button {
-  border: none;
-  outline: none;
-  color: #fff;
-  cursor: pointer;
-  padding: 14px 0;
-  font-size: 16px;
-  border-radius: 8px;
-  width: calc(50% - 6px);
-  transition: transform 0.3s ease, background-color 0.3s ease;
+    flex: 1;
+    padding: 14px 0;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    transition: 0.3s;
 }
 
-.buttons button:active {
-  transform: scale(0.97);
+.refresh-word { background: #4b4b61; color: #fff; }
+.check-word { background: #00d2ff; color: #000; }
+
+/* PRO LEVEL BUTTON STYLE */
+.pro-link { text-decoration: none; }
+
+.pro-level-btn {
+    position: relative;
+    width: 100%;
+    padding: 15px;
+    background: linear-gradient(45deg, #7000ff, #ff0055);
+    border: none;
+    border-radius: 12px;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    cursor: pointer;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(112, 0, 255, 0.4);
+    transition: 0.4s;
 }
 
-.buttons .refresh-word {
-  background: #6c757d;
+.pro-level-btn:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 30px rgba(255, 0, 85, 0.6);
 }
 
-.buttons .refresh-word:hover {
-  background: #5f666d;
+.btn-text { position: relative; z-index: 2; }
+
+.btn-glow {
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: rgba(255, 255, 255, 0.1);
+    transform: rotate(45deg);
+    transition: 0.5s;
 }
 
-.buttons .check-word {
-  background: #5372f0;
-}
-
-.buttons .check-word:hover {
-  background: #2c52ed;
+.pro-level-btn:hover .btn-glow {
+    left: 100%;
 }
